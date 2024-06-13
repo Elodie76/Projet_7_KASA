@@ -1,5 +1,5 @@
 
-// import imgBannerHome from "../assets/images/paysage-cotier.png";
+import imgBanner from "../assets/images/paysage-cotier.png";
 
 
 const Home = () => {
@@ -8,10 +8,12 @@ const Home = () => {
     return (
         <div className="home">
             <div className="banner">
-            {/* <img src={imgBanner} alt="paysage-cotier" className="banner-img" /> */}
-            <h1 className="banner-title">{title}</h1>
+                <img src={imgBanner} alt="paysage-cotier" className="banner-img" />
+                <div className="banner-filter">
+                    <h1 className="banner-title">{title}</h1> 
+                </div>
             </div>
-            <h1>Acceuil</h1>
+            
         </div>
         
         

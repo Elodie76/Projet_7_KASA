@@ -1,11 +1,15 @@
 // sass/
 
     // base/
-        @import "./base/app.scss";    // #  
+        @import "./base/normalize";    // #  Style par défaut
+        @import "./base/app";    // #  
 
     // layout/
         @import "./layout/header";    // # Header 
+        @import "./layout/footer";    // # Footer
 
     // components/
-        @import "./components/banner";    // # Banner     
+        
 
+    // pages/
+        @import "./pages/home";    // # Homepage     

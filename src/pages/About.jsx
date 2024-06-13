@@ -1,10 +1,10 @@
-import Banner from '../components/Banner'
+
 
 const About = () => {
     return (
         
-        <div>
-            <Banner />
+        <div className="about">
+            
             <h1>page a propos</h1>
         </div>
     );

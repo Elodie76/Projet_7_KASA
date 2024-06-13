@@ -1,0 +1,51 @@
+:root {
+    --main-font: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    
+    
+    
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+
+
+.home, .about, .hebergement, .errorHTTP{
+   flex: 1;
+   margin: 0px 60px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+h1, h2, h3, a, p{
+    font-family: var(--main-font);
+}

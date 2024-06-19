@@ -6,16 +6,17 @@ import Thumb from "../components/Thumb";
 
 const Home = () => {
  
-    // const imgBanner = imgBannerHome
     return (
-        <>
-        <Banner imgBanner={bg} title={'Chez vous, partout et ailleurs'} />
-        <div className="gallery">
-         <Thumb logements={logements} />   
+        <div className="home">
+            <Banner imgBanner={bg} title={'Chez vous, partout et ailleurs'} />
+            
+                <div className="gallery">
+                    <Thumb logements={logements} />   
+                </div>
+            
+            
         </div>
         
-
-        </>
     );
 };
 

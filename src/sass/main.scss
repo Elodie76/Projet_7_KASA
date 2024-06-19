@@ -2,14 +2,13 @@
 
     // base/
         @import "./base/normalize";    // #  Style par défaut
-        @import "./base/app";    // #  
 
     // layout/
         @import "./layout/header";    // # Header 
         @import "./layout/footer";    // # Footer
 
     // components/
-        
+        @import "./components/thumb";    // # Hebergement card
 
     // pages/
         @import "./pages/home";    // # Homepage     

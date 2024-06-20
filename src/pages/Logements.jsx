@@ -2,19 +2,20 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import logements from "../data/logements.json";
 import DropdownBtn from "../components/DropdownBtn";
+import Tag from '../components/Tag';
 
 const logementId = (id)=>{
     return logements.find((logement)=>logement.id === id);
 }
 
-const Hebergement = () => {
+const Logements = () => {
     const{id} = useParams();
     const logement = logementId(id);
     const imagesLogement = logement.pictures;
     const hostName = logement.host.name;
     const hostPicture = logement.host.picture;
     return (
-        <div className='hebergement'>
+        <div className='logements'>
 
             
             <div className="pictures">
@@ -27,21 +28,29 @@ const Hebergement = () => {
             <div className='logements-content'>
                 <div className='description'>
                     <div className='logement-box'>
-                        <p>{logement.title}</p>
+                        <h1>{logement.title}</h1>
                         <p>{logement.location}</p>
                     </div>
                     <div className='host-box'>
                         <p>{hostName}</p>
-                        <img src={hostPicture} alt={hostName} /> */
+                        <img src={hostPicture} alt={hostName} />
                     </div>
                 </div>
                 <div className='info-box'>
-                    <div className='tags'>tags</div>
-                    <div className='rating'>ratings stars</div>
+                    <div className='tags'>
+                        <Tag />
+                    </div>
+                    <div className='rating'>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
                 </div>
                 <div className='dropdown-box'>
-                    <DropdownBtn title="Description" />
-                    <DropdownBtn title="Équipement" />
+                    <DropdownBtn className='dropdown-btn' title="Description" />
+                    <DropdownBtn className='dropdown-btn'title="Équipement" />
                 </div>
             </div>
             
@@ -49,4 +58,4 @@ const Hebergement = () => {
     );
 };
 
-export default Hebergement;
+export default Logements;

@@ -1,20 +1,21 @@
 // sass/
 
     // base/
-        @import "./base/normalize";    // #  Style par défaut
+        @import "./base/normalize";             // #  Style par défaut
 
     // layout/
-        @import "./layout/header";    // # Header 
-        @import "./layout/footer";    // # Footer
-        @import "./layout/about-content";    // # Bloc dropdown page about
+        @import "./layout/header";              // # Header 
+        @import "./layout/footer";              // # Footer
+        @import "./layout/about-content";       // # Bloc dropdown page about
 
     // components/
-        @import "./components/banner";    // # Banière
-        @import "./components/thumb";    // # Hebergement card
-        @import "./components/pictures";    // # Images des logements
-        @import "./components/dropdownBtn";    // # dropdownBtn
+        @import "./components/banner";          // # Banière
+        @import "./components/thumb";           // # Hebergement card
+        @import "./components/pictures";        // # Images des logements
+        @import "./components/dropdownBtn";     // # dropdownBtn
+        @import "./components/tag";             // # Tag template
         
 
     // pages/
-        @import "./pages/home";    // # Homepage     
-        @import "./pages/logements";    // # Page Logements    
+        @import "./pages/home";                 // # Homepage     
+        @import "./pages/logements";            // # Page Logements    

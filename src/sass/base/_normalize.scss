@@ -1,5 +1,6 @@
 :root {
     --main-font: "Montserrat", sans-serif;
+    --main-color: #FF6060;
 }
 
 * {
@@ -32,7 +33,7 @@ body{
 
 
 
-.home, .about, .hebergement, .errorHTTP{
+.home, .about, .logements, .errorHTTP{
    flex: 1;
    margin: 0px 60px;
    

@@ -1,17 +1,68 @@
-.pictures{
+.logements{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .pictures{
     
-    border-radius: 25px;
-    border: solid black;
-    object-fit: cover;
-    .img-logement{
-       height: 415px; 
-    
-}
-}
-.logements-content{
-    .description, .info-box, .dropdown-box{
-        display: flex;
-        justify-content: space-between;
+        border-radius: 25px;
+        border: solid black;
+        object-fit: cover;
+        .img-logement{
+           height: 415px; 
+        
     }
-    
+    }
+    .logements-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .description, .info-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .description{
+            .logement-box{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            h1{
+              color: var(--main-color);  
+              font-size: 36px;
+              font-weight: 500;
+              
+            }
+            p{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            }
+            .host-box{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                height: 64px;
+                p{
+                    text-align: right;
+                    line-height: 20px;
+                    color: var(--main-color);
+                    font-weight: 500;
+                    font-size: 18px;
+                    height: 40px;
+                    width: 90px;
+                }
+                img{
+                    display: block;
+                    border-radius: 50%;
+                    height: 64px;
+                }
+            }
+            
+        }
+        .dropdown-box{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
 }

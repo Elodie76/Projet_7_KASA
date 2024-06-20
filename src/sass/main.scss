@@ -6,11 +6,13 @@
     // layout/
         @import "./layout/header";    // # Header 
         @import "./layout/footer";    // # Footer
+        @import "./layout/about-content";    // # Bloc dropdown page about
 
     // components/
         @import "./components/banner";    // # Banière
         @import "./components/thumb";    // # Hebergement card
         @import "./components/pictures";    // # Images des logements
+        @import "./components/dropdownBtn";    // # dropdownBtn
         
 
     // pages/

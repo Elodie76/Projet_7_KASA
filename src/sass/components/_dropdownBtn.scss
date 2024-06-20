@@ -1,0 +1,19 @@
+.dropdownBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: #FF6060;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    padding: 5px 20px;
+    .fa-chevron-up{
+        width: 15px;
+        height: 15px;
+        font-size: 1.2rem;
+        color: white;
+    }
+}

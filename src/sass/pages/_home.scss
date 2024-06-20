@@ -6,48 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    .banner{
-        // background: url("../../assets/images/paysage-cotier.png") center/cover;  ne marche pas !!?
-        background-color: grey;
-        border-radius: 20px;
-        position: relative;
-        width: 100%;
-        height: 223px;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: var(--border-radius-elements);
-           
-        }  
-        h1{
-                position: absolute;
-                top: 35%;
-                left: 20%;
-                margin-right: 50px;
-                color: white;
-                font-size: 3rem;
-                text-shadow:  0px 3px 4px #202020;
-                
-                // -webkit-text-stroke: 1px #202020;
-                font-weight: 700;
-                z-index: 2;
     
-        }
-    }
-    .banner::after{
-        content: '';
-        position: absolute;
-        border-radius: var(--border-radius-elements);
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: black;
-        opacity: .5;
-        z-index: 1;
-    }
     
      .gallery{
             display: flex;

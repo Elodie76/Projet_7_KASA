@@ -1,13 +1,14 @@
 import React from 'react';
 import Proptypes from"prop-types";
+import{Link} from "react-router-dom";
 
 const Thumb = ({logements}) => {
     return (
-        logements.map((logements)=>(
-            <div className='thumb' key={logements.id}>
-                <img src={logements.cover} alt={logements.title} />
-                <h3>{logements.title}</h3>
-            </div>
+        logements.map((logement)=>(
+            <Link to={`/logement/${logement.id}`} className='thumb' key={logement.id}>
+                <img src={logement.cover} alt={logement.title} />
+                <h3>{logement.title}</h3>
+            </Link>
         ))
         
     );

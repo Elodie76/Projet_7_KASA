@@ -8,7 +8,10 @@
         @import "./layout/footer";    // # Footer
 
     // components/
+        @import "./components/banner";    // # Banière
         @import "./components/thumb";    // # Hebergement card
+        @import "./components/pictures";    // # Images des logements
+        
 
     // pages/
         @import "./pages/home";    // # Homepage     

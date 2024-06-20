@@ -1,0 +1,17 @@
+.pictures{
+    
+    border-radius: 25px;
+    border: solid black;
+    object-fit: cover;
+    .img-logement{
+       height: 415px; 
+    
+}
+}
+.logements-content{
+    .description, .info-box, .dropdown-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}

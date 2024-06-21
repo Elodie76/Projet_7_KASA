@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Tag = () => {
+const Tag = ({title}) => {
     return (
         <div className='tag'>
-            <p className='tag-name'>Tag-name</p>
+            <p className='tag-name'>{title}</p>
         </div>
     );
 };

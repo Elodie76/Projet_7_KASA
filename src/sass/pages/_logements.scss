@@ -15,7 +15,7 @@
     .logements-content{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         .description, .info-box {
             display: flex;
             justify-content: space-between;
@@ -56,6 +56,13 @@
                     border-radius: 50%;
                     height: 64px;
                 }
+            }
+            
+        }
+        .info-box{
+            .tags{
+                display: flex;
+                gap: 10px;
             }
             
         }

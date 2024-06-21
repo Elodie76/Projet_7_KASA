@@ -1,0 +1,14 @@
+.rating{
+    display: flex;
+    gap: 10px;
+    .fa-star{
+        font-size: 24px;
+    }
+    .fullStars{
+        color: var(--main-color);
+        
+    }
+    .emptyStars{
+        color: #E3E3E3;
+    }
+}

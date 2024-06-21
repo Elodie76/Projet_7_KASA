@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import logements from "../data/logements.json";
 import DropdownBtn from "../components/DropdownBtn";
 import Tag from '../components/Tag';
+import Rating from '../components/Rating';
 
 const logementId = (id)=>{
     return logements.find((logement)=>logement.id === id);
@@ -11,20 +12,21 @@ const logementId = (id)=>{
 const Logements = () => {
     const{id} = useParams();
     const logement = logementId(id);
-    const imagesLogement = logement.pictures;
+    // const imagesLogement = logement.pictures;
     const hostName = logement.host.name;
     const hostPicture = logement.host.picture;
+    const tags =logement.tags;
     return (
         <div className='logements'>
 
             
-            <div className="pictures">
+            {/* <div className="pictures">
                 {imagesLogement.map((imageLogement,index)=>{
                 return (
                     <img className='img-logement' src={imageLogement} alt={imageLogement.title} key={(imageLogement,index)}/>
                 )
                 })}
-            </div>
+            </div> */}
             <div className='logements-content'>
                 <div className='description'>
                     <div className='logement-box'>
@@ -38,15 +40,15 @@ const Logements = () => {
                 </div>
                 <div className='info-box'>
                     <div className='tags'>
-                        <Tag />
-                    </div>
-                    <div className='rating'>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
+                        {tags.map((tag,index)=>{
+                        return (
+                        <Tag title={tag} key={(tag,index)} />                     
+                        )
+                        })}
+                    </div>                    
+                    <Rating rating={logement.rating} />
+                    
+                 
                 </div>
                 <div className='dropdown-box'>
                     <DropdownBtn className='dropdown-btn' title="Description" />

@@ -40,8 +40,15 @@ const Logements = () => {
                         <Tag title={tag} key={(tag,index)} />                     
                         )
                         })}
-                    </div>                    
-                    <Rating rating={logement.rating} />
+                    </div>
+                    <div className='rating-mobile'>
+                       <Rating rating={logement.rating} /> 
+                       <div className='host-box-mobile'>
+                        <p>{hostName}</p>
+                        <img src={hostPicture} alt={hostName} />
+                    </div>
+                    </div>                   
+                    
                     
                  
                 </div>

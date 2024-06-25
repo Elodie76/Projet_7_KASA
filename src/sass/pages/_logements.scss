@@ -54,12 +54,92 @@
                 display: flex;
                 gap: 10px;
             }
+            .rating-mobile{
+                .host-box-mobile{
+                    display: none;
+                }
+            }
             
         }
         .dropdown-box{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             gap: 50px;
+            .dropdown{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-device-width : 768px) and (max-width: 1280px){
+    .logements{
+        gap: 10px;
+        .logements-content{
+            .description{
+                .logement-box{
+                h1{
+                  font-size: 20px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                }  
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width : 320px){
+    .logements{
+        gap: 10px;
+        .logements-content{
+            .description{
+                .logement-box{ 
+                    h1{
+                        font-size: 15px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .host-box{
+                    display: none;
+                }
+            }
+            .info-box{
+                flex-direction: column;
+                .rating-mobile{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .host-box-mobile{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 15px;
+                        height: 64px;
+                        p{
+                            text-align: right;
+                            line-height: 20px;
+                            color: var(--main-color);
+                            font-weight: 500;
+                            font-size: 18px;
+                            height: 40px;
+                            width: 90px;
+                        }
+                        img{
+                            display: block;
+                            border-radius: 50%;
+                            height: 64px;
+                        }
+                    
+                    }
+                }
+            }
         }
     }
 }

@@ -11,10 +11,27 @@
     font-weight: 700;
     padding: 5px 15px;
     width: 100%;
+    cursor: pointer;
     .fa-chevron-up{
         width: 15px;
         height: 15px;
         font-size: 1.2rem;
         color: white;
+        
     }
+    .toggle-btn{
+        transition: transform .3s;
+    }
+    .dropdown-open{
+        transform: rotate(180deg);
+    }
+    .dropdown-content{
+    padding-top: .25px;
+    height: 0;
+    overflow: hidden;
+}
+}
+
+.dropdown-open, .dropdown-content{
+    height: auto;
 }

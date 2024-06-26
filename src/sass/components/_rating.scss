@@ -12,3 +12,12 @@
         color: #E3E3E3;
     }
 }
+
+@media screen and (max-width : 500px){
+    .rating{
+        gap: 3px;
+        .fa-star{
+            font-size: 20px;
+        }
+    }
+}

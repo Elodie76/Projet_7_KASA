@@ -25,36 +25,16 @@
                 font-size: 18px;
                 font-weight: 500;
             }
-            }
-            .host-box{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-                height: 64px;
-                p{
-                    text-align: right;
-                    line-height: 20px;
-                    color: var(--main-color);
-                    font-weight: 500;
-                    font-size: 18px;
-                    height: 40px;
-                    width: 90px;
-                }
-                img{
-                    display: block;
-                    border-radius: 50%;
-                    height: 64px;
-                }
-            }
-            
+            }  
         }
         .info-box{
             .tags{
                 display: flex;
                 gap: 10px;
+                flex-wrap: wrap;
             }
             .rating-mobile{
+                width: 100%;
                 .host-box-mobile{
                     display: none;
                 }
@@ -74,29 +54,61 @@
 }
 
 
-@media screen and (min-device-width : 768px) and (max-width: 1280px){
+@media screen and (max-width : 768px){
     .logements{
         gap: 10px;
         .logements-content{
             .description{
                 .logement-box{
-                h1{
-                  font-size: 20px;
+                    h1{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
                 }
-                p{
-                    font-size: 18px;
-                }
-                }  
             }
-            
+            .info-box{
+                gap: 15px;
+                flex-direction: column;
+                .rating-mobile{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .host-box-mobile{
+                          
+                    }
+                } 
+            }    
+            .dropdown-box{
+                gap: 20px;
+            }
+        
+    }
+}
+@media screen and (max-width : 500px){
+    .logements{
+        .logements-content{
+            .description{
+                .host-box{
+                    display: none;
+                }
+            }
+            .info-box{
+                .rating-mobile{
+                    .host-box-mobile{
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 }
-
 @media screen and (max-width : 320px){
     .logements{
         gap: 10px;
         .logements-content{
+            gap: 15px;
             .description{
                 .logement-box{ 
                     h1{
@@ -105,40 +117,20 @@
                     p{
                         font-size: 12px;
                     }
-                }
-                .host-box{
-                    display: none;
-                }
+                }  
             }
             .info-box{
-                flex-direction: column;
                 .rating-mobile{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
                     .host-box-mobile{
                         display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 15px;
-                        height: 64px;
-                        p{
-                            text-align: right;
-                            line-height: 20px;
-                            color: var(--main-color);
-                            font-weight: 500;
-                            font-size: 18px;
-                            height: 40px;
-                            width: 90px;
-                        }
-                        img{
-                            display: block;
-                            border-radius: 50%;
-                            height: 64px;
-                        }
-                    
+                        height: 50px;
                     }
                 }
+            }
+            .dropdown-box{
+                flex-direction: column;
+                gap: 15px;
+            }
             }
         }
     }

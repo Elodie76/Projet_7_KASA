@@ -5,6 +5,7 @@ import DropdownBtn from "../components/DropdownBtn";
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
 import Slider from '../components/Slider';
+import Host from '../components/Host';
 
 const logementId = (id)=>{
     return logements.find((logement)=>logement.id === id);
@@ -29,8 +30,7 @@ const Logements = () => {
                         <p>{logement.location}</p>
                     </div>
                     <div className='host-box'>
-                        <p>{hostName}</p>
-                        <img src={hostPicture} alt={hostName} />
+                    <Host hostName={hostName} hostPicture={hostPicture} />
                     </div>
                 </div>
                 <div className='info-box'>
@@ -44,13 +44,9 @@ const Logements = () => {
                     <div className='rating-mobile'>
                        <Rating rating={logement.rating} /> 
                        <div className='host-box-mobile'>
-                        <p>{hostName}</p>
-                        <img src={hostPicture} alt={hostName} />
+                        <Host hostName={hostName} hostPicture={hostPicture} />
                     </div>
                     </div>                   
-                    
-                    
-                 
                 </div>
                 <div className='dropdown-box'>
                     <DropdownBtn className='dropdown-btn' title="Description" />

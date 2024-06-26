@@ -8,10 +8,17 @@ const Home = () => {
  
     return (
         <div className="home">
-            <Banner imgBanner={bg} title={'Chez vous, partout et ailleurs'}  />
+            <Banner 
+                imgBanner={bg} 
+                title1={'Chez vous,'}
+                title2={'partout et ailleurs'}  
+            />
             
                 <div className="gallery">
-                    <Thumb logements={logements} />   
+                    <div className="gallery-wrapper">
+                        <Thumb logements={logements} />  
+                    </div>
+                     
                 </div>
             
             

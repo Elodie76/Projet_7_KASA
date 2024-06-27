@@ -24,8 +24,8 @@ const DropdownBtn = ({title, content}) =>  {
   return (
     <div className={`dropdownBtn ${isOpen ? 'open' : ''}`} ref={dropdownRef}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        {title}
-        <i className={`fa-solid fa-chevron-${isOpen ? 'up' : 'down'}`}></i>
+        <h3 className='dropdownTitle'>{title}</h3>
+        <i className={`fa-solid fa-chevron-${isOpen ? 'down' : 'up'}`}></i>
       </button>
       {isOpen && <div className="dropdown-content">{content}</div>}
     </div>

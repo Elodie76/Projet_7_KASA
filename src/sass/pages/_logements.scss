@@ -28,13 +28,16 @@
             }  
         }
         .info-box{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
             .tags{
                 display: flex;
                 gap: 10px;
                 flex-wrap: wrap;
             }
             .rating-mobile{
-                width: 100%;
+                
                 .host-box-mobile{
                     display: none;
                 }
@@ -96,6 +99,10 @@
                     }
                 }
             }
+            .dropdown-box{
+                flex-direction: column;
+                gap: 0;
+            }
         }
     }
 }
@@ -123,8 +130,7 @@
                 }
             }
             .dropdown-box{
-                flex-direction: column;
-                gap: 15px;
+                
             }
             }
         }

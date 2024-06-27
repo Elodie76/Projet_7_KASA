@@ -7,7 +7,7 @@ const Thumb = ({logements}) => {
         logements.map((logement)=>(
             <Link to={`/logement/${logement.id}`} className='thumb' key={logement.id}>
                 <img src={logement.cover} alt={logement.title} />
-                <h3>{logement.title}</h3>
+                <h3 className='thumbTitle'>{logement.title}</h3>
             </Link>
         ))
         

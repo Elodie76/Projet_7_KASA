@@ -1,32 +1,40 @@
 .host{
     display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-                height: 64px;
-                p{
-                    text-align: right;
-                    line-height: 20px;
-                    color: var(--main-color);
-                    font-weight: 500;
-                    font-size: 18px;
-                    height: 40px;
-                    width: 90px;
-                    line-height: 25px;
-                }
-                img{
-                    display: block;
-                    border-radius: 50%;
-                    height: 64px;
-                    margin-right: 10px;
-                }
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    height: 64px;
+    p{
+        text-align: right;
+        line-height: 20px;
+        color: var(--main-color);
+        font-weight: 500;
+        font-size: 18px;
+        height: 40px;
+        width: 90px;
+        line-height: 25px;
+    }
+    img{
+        display: block;
+        border-radius: 50%;
+        height: 64px;
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (max-width : 500px){
+    .host{
+        gap: 5px;
+    }
 }
 @media screen and (max-width : 320px){
     .host{
-        width: 100px;
+        width: auto;
         p{
             font-size: 13px;
             line-height: 20px;
+            width: 70px;
         }
         img{
             height: 50px;

@@ -47,8 +47,8 @@ const Logements = () => {
                     <div className='rating-mobile'>
                        <Rating rating={logement.rating} /> 
                        <div className='host-box-mobile'>
-                        <Host hostName={hostName} hostPicture={hostPicture} />
-                    </div>
+                            <Host hostName={hostName} hostPicture={hostPicture} />
+                        </div>
                     </div>                   
                 </div>
                 <div className='dropdown-box'>

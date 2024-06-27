@@ -1,8 +1,22 @@
 .about-content{
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-top: 40px;
     padding: 0 100px;
-    gap: 30px;
-    
+    gap: 30px;  
+} 
+
+
+@media screen and (max-width : 768px){
+    .about-content{
+        padding: 0 60px;
+    }
+}
+@media screen and (max-width : 320px){
+    .about-content{
+        margin-top: 15px;
+        padding: 0;
+        gap: 0; 
+    }
 }

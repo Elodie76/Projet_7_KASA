@@ -1,0 +1,49 @@
+.errorHTTP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 50px;
+    h1{
+        height: 13rem;
+        color: var(--main-color);
+        font-size: 13rem;
+        font-weight: 700;
+    }
+    p{
+        color: var(--main-color);
+        font-size: 2rem;
+        text-align: center;
+    }
+    .linkErrorPage{
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width : 800px){
+    .errorHTTP{
+        gap: 50px;
+        h1{
+            font-size: 8rem;  
+        }
+        p{
+            font-size: 1.4rem;
+        }
+    }
+}
+@media screen and (max-width : 320px){
+    .errorHTTP{
+        gap: 100px;
+        h1{
+            font-size: 7rem;  
+            height: 7rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        .linkErrorPage{
+            font-size: 0.9rem;
+        }
+    }
+}

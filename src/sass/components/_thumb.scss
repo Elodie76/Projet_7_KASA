@@ -15,22 +15,26 @@
         object-fit: cover;
         border-radius: var(--border-radius-card);
     }
-    h3{
+    .thumbTitle{
         display: flex;
         align-items: flex-end;
         position: absolute;
         z-index: 1;
-        height: 52px;
-        width: 90%;
+        height: 50%;
+        width: 100%;
         bottom: 0;
         left: 0;
-        margin: 15px;
+        padding: 15px;
+        border-radius: var(--border-radius-card);
         color: white;
         font-weight: 700;
         font-size: 18px;
         word-wrap: break-word;
+        background: linear-gradient(to bottom, transparent, rgba(11, 11, 11, 0.704));
     }
+    
 }
+
 @media screen and (max-width : 1200px){
     .thumb{
         height: 250px;

@@ -37,9 +37,10 @@
 
 
 @media screen and (max-width : 320px){
-    .dropdownBtn{
-        p, .fa-chevron-up{
-            font-size: 0.8rem;
-        }
+    .dropdownTitle{
+        font-size: 0.8rem;
+    }
+    .dropdown-content{
+        font-size: 0.8rem;
     }
 }

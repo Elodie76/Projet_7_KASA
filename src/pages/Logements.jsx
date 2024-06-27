@@ -18,6 +18,9 @@ const Logements = () => {
     const hostName = logement.host.name;
     const hostPicture = logement.host.picture;
     const tags =logement.tags;
+    const description =logement.description;
+    const equipments =logement.equipments;
+    
     return (
         <div className='logements'>        
             
@@ -49,8 +52,24 @@ const Logements = () => {
                     </div>                   
                 </div>
                 <div className='dropdown-box'>
-                    <DropdownBtn className='dropdown-btn' title="Description" />
-                    <DropdownBtn className='dropdown-btn'title="Équipement" />
+                    <DropdownBtn 
+                        className='dropdown-btn' 
+                        title="Description"
+                        content={
+                            <ul>
+                                {description}
+                            </ul>
+                        } />
+                    <DropdownBtn 
+                        className='dropdown-btn' 
+                        title="Équipements"
+                        content={
+                            <ul>
+                                {equipments.map((item, index) => (
+                                <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        } />
                 </div>
             </div>
             

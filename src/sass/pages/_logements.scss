@@ -46,9 +46,7 @@
             flex-direction: row;
             justify-content: space-between;
             gap: 50px;
-            .dropdown{
-                width: 100%;
-            }
+            width: 100%;
         }
     }
 }
@@ -75,15 +73,11 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    .host-box-mobile{
-                          
-                    }
                 } 
             }    
             .dropdown-box{
                 gap: 20px;
             }
-        
     }
 }
 @media screen and (max-width : 500px){
@@ -96,6 +90,7 @@
             }
             .info-box{
                 .rating-mobile{
+                    align-items: end;
                     .host-box-mobile{
                         display: flex;
                     }

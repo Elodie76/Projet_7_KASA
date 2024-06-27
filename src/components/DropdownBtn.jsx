@@ -1,20 +1,35 @@
-import React from 'react';
-import {useState} from "react"
+import React, { useState, useEffect, useRef } from 'react';
 
-const DropdownBtn = ({title}) =>  {
-    const [open, setOpen] =useState(false)
-    return (
-        <div className='dropdown'>
-            <div className={open ?"dropdownBtn dropdown-open" : "dropdownBtn"}>
-                <p>{title}</p>
-                <i className="fa-solid fa-chevron-up toggle-btn "></i>
-            </div>
-            <div className='dropdown-content'>
-                content
-            </div>
-        </div>
-        
-    );
+const DropdownBtn = ({title, content}) =>  {
+    const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className={`dropdownBtn ${isOpen ? 'open' : ''}`} ref={dropdownRef}>
+      <button className="dropdown-button" onClick={toggleDropdown}>
+        {title}
+        <i className={`fa-solid fa-chevron-${isOpen ? 'up' : 'down'}`}></i>
+      </button>
+      {isOpen && <div className="dropdown-content">{content}</div>}
+    </div>
+  );
 };
 
 export default DropdownBtn;

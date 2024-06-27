@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 const Slider = ({pictures}) => {
     const [slide, setSlide] = useState(0);
+
+    // const nextSlide = () => {
+    //     setSlide(slide === pictures.length -1 ? 0 : slide + 1);
+    // };
+    // const prevSlide = () => {
+    //     setSlide(slide === 0 ? pictures.length -1 : slide - 1);
+    // };
     const nextSlide = () => {
-        setSlide(slide === pictures.length -1 ? 0 : slide + 1);
-    }
+        setSlide((prevSlide) => (prevSlide === pictures.length - 1 ? 0 : prevSlide + 1));
+    };
+
+    // Fonction pour revenir à la diapositive précédente
     const prevSlide = () => {
-        setSlide(slide === 0 ? pictures.length -1 : slide - 1);
-    }
-    
+        setSlide((prevSlide) => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
+    };
+
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 3500);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className='carousel'>
             {pictures.length > 1 && (

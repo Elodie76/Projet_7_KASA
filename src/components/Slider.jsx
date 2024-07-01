@@ -16,7 +16,6 @@ const Slider = ({pictures}) => {
         setSlide((prevSlide) => (prevSlide === pictures.length - 1 ? 0 : prevSlide + 1));
     };
 
-    // Fonction pour revenir à la diapositive précédente
     const prevSlide = () => {
         setSlide((prevSlide) => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
     };

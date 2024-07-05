@@ -1,0 +1,12 @@
+.dropContent{
+    width: 100px;
+    height: 100px;
+    background: gray;
+}
+
+.fade {
+    transition: opacity .3s;
+}
+.fade.out {
+    transition: opacity 0;
+}

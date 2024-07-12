@@ -8,8 +8,8 @@ const dropdownRef = useRef(null);
 const toggleDropdown = () => {
   if (isOpen) {
     setIsAnimating(true);
+    setIsOpen(false);
     setTimeout(() => {
-      setIsOpen(false);
       setIsAnimating(false);
     }, 1000);
      // Durée de l'animation de fermeture
@@ -43,12 +43,10 @@ return (
       <h3 className='dropdownTitle'>{title}</h3>
       <i className={`fa-solid fa-chevron-${isOpen ? 'up rotate--open ' : 'up rotate--close'}`}></i>
     </button>
-    {(isOpen || isAnimating) && (
-      <div 
-        className={`dropdown-content ${isOpen ? 'content--open' : 'content--close'}`}>
-        {content}
-      </div>
-     )}
+    <div 
+      className={`dropdown-content ${isOpen ? 'content--open' : 'content--close'}`}>
+      {content}
+    </div>
   </div>
 );
 };
